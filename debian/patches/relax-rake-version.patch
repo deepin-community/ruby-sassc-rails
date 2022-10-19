@@ -1,0 +1,21 @@
+From: Sruthi Chandran <srud@debian.org>
+Date: Wed, 14 Aug 2019 19:15:03 +0530
+Subject: Relax rake version
+
+---
+ sassc-rails.gemspec | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/sassc-rails.gemspec b/sassc-rails.gemspec
+index 2178fbf..cfd9dd8 100644
+--- a/sassc-rails.gemspec
++++ b/sassc-rails.gemspec
+@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
+ 
+   spec.add_development_dependency 'pry'
+   spec.add_development_dependency "bundler"
+-  spec.add_development_dependency "rake", "~> 10.0"
++  spec.add_development_dependency "rake", "> 10.0"
+   spec.add_development_dependency 'mocha'
+ 
+   spec.add_dependency "sassc", ">= 2.0"

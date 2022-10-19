@@ -1,0 +1,3 @@
+git-in-gemspec.patch
+relax-rake-version.patch
+fix-autopkgtest.patch

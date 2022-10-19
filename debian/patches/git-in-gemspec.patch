@@ -1,0 +1,21 @@
+From: Sruthi Chandran <srud@debian.org>
+Date: Wed, 14 Aug 2019 19:10:04 +0530
+Subject: Remove git from gemspec
+
+---
+ sassc-rails.gemspec | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/sassc-rails.gemspec b/sassc-rails.gemspec
+index 38349f7..2178fbf 100644
+--- a/sassc-rails.gemspec
++++ b/sassc-rails.gemspec
+@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
+   spec.homepage      = "https://github.com/sass/sassc-rails"
+   spec.license       = "MIT"
+ 
+-  spec.files         = `git ls-files -z`.split("\x0")
++  spec.files         = Dir.glob("**/*").select {|v| v !~ /^debian/}
+   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+   spec.require_paths = ["lib"]

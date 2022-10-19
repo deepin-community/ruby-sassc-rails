@@ -1,0 +1,25 @@
+From: Daniel Leidert <dleidert@debian.org>
+Date: Thu, 11 Nov 2021 19:34:41 +0100
+Subject: Fix autopkgtest
+
+---
+ test/test_helper.rb | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/test/test_helper.rb b/test/test_helper.rb
+index 8b38c02..e890605 100644
+--- a/test/test_helper.rb
++++ b/test/test_helper.rb
+@@ -8,10 +8,11 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
+ require "pry"
+ require "fileutils"
+ require 'rails'
+-require 'bundler/setup'
++require 'sassc-rails'
+ require "minitest/autorun"
+ require 'mocha/minitest'
+ 
++require 'bundler/setup'
+ Bundler.require
+ 
+ Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }

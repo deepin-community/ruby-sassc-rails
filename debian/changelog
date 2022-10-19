@@ -1,0 +1,61 @@
+ruby-sassc-rails (2.1.2-6) unstable; urgency=low
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Daniel Leidert ]
+  * d/control (Standards-Version): Bump to 4.6.0.
+    (Depends): Use ${ruby:Depends}.
+  * d/copyright: Add Upstream-Contact field.
+  * d/ruby-tests.rake: Remove Gemfile.lock between tests (closes: #996404).
+  * d/rules: Use gem installation layout.
+  * d/patches/fix-autopkgtest.patch: Add patch.
+    - Fix autopkgtest by requiring sassc-rails.
+  * d/patches/series: Enable new patch.
+  * d/upstream/metadata: Add Archive field.
+
+ -- Daniel Leidert <dleidert@debian.org>  Thu, 11 Nov 2021 19:38:44 +0100
+
+ruby-sassc-rails (2.1.2-5) unstable; urgency=medium
+
+  * Team upload
+  * Add Breaks+Replaces: ruby-sass-rails (<< 6) (Closes: #952682)
+  * ruby-sassc-rails depends on pry which broke with
+    ruby-method-source update (fixed now) (Closes: #954544)
+  * Fix package wrt cme
+  * Add d/clean file
+  * Drop runtime dependency on ruby interpreter
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Mon, 06 Apr 2020 04:14:26 +0530
+
+ruby-sassc-rails (2.1.2-4) unstable; urgency=medium
+
+  * Remove Conflicts on ruby-sass-rails (new version of ruby-sass-rails is now
+    available)
+  * Bump Standards-Version to 4.5.0 (no changes needed)
+  * Drop compat file, rely on debhelper-compat and bump compat level to 12
+
+ -- Sruthi Chandran <srud@debian.org>  Thu, 06 Feb 2020 15:51:04 +0100
+
+ruby-sassc-rails (2.1.2-3) unstable; urgency=medium
+
+  * Add conflicts with ruby-sass-rails
+
+ -- Sruthi Chandran <srud@debian.org>  Thu, 05 Sep 2019 20:06:21 +0530
+
+ruby-sassc-rails (2.1.2-2) unstable; urgency=medium
+
+  * Team upload
+  * Source upload
+  * Add salsa-ci.yml
+
+ -- Utkarsh Gupta <guptautkarsh2102@gmail.com>  Wed, 04 Sep 2019 13:39:31 +0530
+
+ruby-sassc-rails (2.1.2-1) unstable; urgency=medium
+
+  * Initial release (Closes: #934759)
+
+ -- Sruthi Chandran <srud@debian.org>  Wed, 14 Aug 2019 19:34:04 +0530

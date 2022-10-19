@@ -1,0 +1,38 @@
+Source: ruby-sassc-rails
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Sruthi Chandran <srud@debian.org>
+Section: ruby
+Priority: optional
+Build-Depends: bundler,
+               debhelper-compat (= 13),
+               gem2deb,
+               pry,
+               rake,
+               ruby-mocha,
+               ruby-railties,
+               ruby-sassc,
+               ruby-sprockets (>> 3.0),
+               ruby-sprockets-rails,
+               ruby-tilt
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-sassc-rails
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-sassc-rails.git
+Homepage: https://github.com/sass/sassc-rails
+Testsuite: autopkgtest-pkg-ruby
+Rules-Requires-Root: no
+XS-Ruby-Versions: all
+
+Package: ruby-sassc-rails
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ${misc:Depends},
+         ${ruby:Depends},
+         ${shlibs:Depends}
+Breaks: ruby-sass-rails (<< 6)
+Replaces: ruby-sass-rails (<< 6)
+Description: Integrate SassC-Ruby into Rails
+ Compilation of Sass can take quite a long time for larger codebases. This gem
+ integrates the C implementation of Sass, LibSass, into the asset pipeline.
+ In one larger project, this made compilation 4x faster.
+ .
+ This should essentially be a drop in alternative to sass-rails.
